@@ -1,27 +1,31 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pr_br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
 </head>
+
 <body>
     <form action="">
-            <input type="search" name="search" id="search">
-            <button type="submit" id="button-addon1">Buscar</button>
-            {% for manual in manuais %}
-
-            <fieldset>
-                <legend>Titulo</legend>
-                <h3>{{manual.titulo}}</h3>
-            </fieldset>
-            <fieldset>
-                <legend>Conteudo</legend>
-                <div>{{manual.conteudo|safe}}</div>
-            </fieldset>
-            <fieldset>
+        <input type="search" name="search" id="search">
+        <button type="submit" id="button-addon1">Buscar</button>
+        {% for manua in manuais %}
+            <div style="border: 1px solid black; margin-top: 50px;">
+                <fieldset>
+                    <legend>Titulo</legend>
+                    {% comment %} <a href="{% url 'manual' manuals.id %}"> {% endcomment %}
+                    <h3>{{manua.titulo}}</h3>
+                    {% comment %} </a> {% endcomment %}
+                </fieldset>
+                <fieldset>
+                    <legend>Conteudo</legend>
+                    <div>{{manua.conteudo|safe}}</div>
+                </fieldset>
+                {% comment %} <!-- <fieldset>
                 <legend>Alterações</legend>
                 <a href="">
                     <i id="finalizar" class="fa-solid fa-check">finalizar</i>
@@ -31,13 +35,15 @@
                 </a>
 
                 <a href="">
-                    <i id="excluir"  class="fa-solid fa-trash-can">excluir</i>
+                    <i id="excluir" class="fa-solid fa-trash-can">excluir</i>
                 </a>
-            </fieldset>
-            {% endfor %}
+            </fieldset> --> {% endcomment %}
+            </div>
+        {% endfor %}
         </table>
-        
+
     </form>
-    
+
 </body>
+
 </html>
