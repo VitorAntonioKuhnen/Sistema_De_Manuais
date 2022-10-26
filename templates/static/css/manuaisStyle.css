@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#titulo{
+    text-align: center;
+}
+
+#conteudo{
+    color: black;
+}
+
+#pesquisa>#search{
+    width: 50%;
+    padding: 7px 10px;
+}
+
+#pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    gap: 5px;
+}
+
+#button{
+    width: 100px;
+    height: 50px;
+}

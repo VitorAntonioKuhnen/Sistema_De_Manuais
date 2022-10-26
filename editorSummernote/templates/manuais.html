@@ -7,39 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
+    <link rel="stylesheet" href="{% static 'css/manuaisStyle.css' %}">
 </head>
 
 <body>
     <form action="">
-        <input type="search" name="search" id="search">
-        <button type="submit" id="button-addon1">Buscar</button>
+        <div id="pesquisa">
+            <input type="search" name="search" id="search">
+            <button type="submit" id="button">Buscar</button>
+        </div>
         {% for manua in manuais %}
-            <div style="border: 1px solid black; margin-top: 50px;">
-                <fieldset>
-                    <legend>Titulo</legend>
-                    <a href="{% url 'manual' manua.id %}">
-                        <h3>{{manua.titulo}}</h3> 
-                    {% comment %} <h3>{{manua.titulo}}</h3> {% endcomment %}
-                    </a>
-                </fieldset>
-                <fieldset>
-                    <legend>Conteudo</legend>
-                    <div>{{manua.conteudo|safe}}</div>
-                </fieldset>
-                {% comment %} <!-- <fieldset>
-                <legend>Alterações</legend>
-                <a href="">
-                    <i id="finalizar" class="fa-solid fa-check">finalizar</i>
-                </a>
-                <a href="">
-                    <i id="editar" class="fa-solid fa-pen-to-square">editar</i>
-                </a>
+        <a href="{% url 'manual' manua.id %}">
+            <div>
+                <div id="titulo">
+                    <h3>{{manua.titulo}}</h3>
+                </div>
 
-                <a href="">
-                    <i id="excluir" class="fa-solid fa-trash-can">excluir</i>
-                </a>
-            </fieldset> --> {% endcomment %}
+                <div id="conteudo">
+                    {{manua.conteudo|safe}}
+                </div>
             </div>
+        </a>
         {% endfor %}
         </table>
 
