@@ -17,9 +17,10 @@
             <div style="border: 1px solid black; margin-top: 50px;">
                 <fieldset>
                     <legend>Titulo</legend>
-                    {% comment %} <a href="{% url 'manual' manuals.id %}"> {% endcomment %}
-                    <h3>{{manua.titulo}}</h3>
-                    {% comment %} </a> {% endcomment %}
+                    <a href="{% url 'manual' manua.id %}">
+                        <h3>{{manua.titulo}}</h3> 
+                    {% comment %} <h3>{{manua.titulo}}</h3> {% endcomment %}
+                    </a>
                 </fieldset>
                 <fieldset>
                     <legend>Conteudo</legend>
