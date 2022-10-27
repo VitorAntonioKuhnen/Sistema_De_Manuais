@@ -6,12 +6,28 @@
     text-decoration: none;
 }
 
-#titulo{
-    text-align: center;
+
+#panelManuais{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 2%;
 }
 
+#titulo{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 150%;
+    color: cadetblue;
+}
+
+#titulo>h2:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+
+}
 #conteudo{
     color: black;
+    text-align: left;
 }
 
 #pesquisa>#search{
@@ -30,4 +46,19 @@
 #button{
     width: 100px;
     height: 50px;
+}
+
+table{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 0px 6px;
+}
+
+tr{
+    padding: 15px 0;
+    border-right: 1px solid black;
+}
+
+img{
+    display: none;
 }
