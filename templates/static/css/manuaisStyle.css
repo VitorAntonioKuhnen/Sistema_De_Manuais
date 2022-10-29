@@ -34,8 +34,15 @@ body{
 #conteudo{
     color: black;
     text-align: left;
+    /* overflow: hidden; */
+    /* height: 20px; */
 }
 
+#campos{
+    /* background-color: blueviolet; */
+    overflow: hidden;
+    height: 177px;
+}
 #pesquisa>#search{
     width: 50%;
     padding: 7px 10px;

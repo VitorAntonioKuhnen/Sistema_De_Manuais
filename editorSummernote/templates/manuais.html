@@ -19,13 +19,13 @@
         <section id="panelManuais">
             {% for manua in manuais %}
             <a href="{% url 'manual' manua.id %}">
-                <div>
+                <div id="campos">
                     <div id="titulo">
                         <h2>{{manua.titulo}}</h2>
                     </div>
 
                     <div id="conteudo">
-                        {{manua.conteudo|safe|truncatechars_html:120}}
+                        {{manua.conteudo|safe}}
                     </div>
                 </div>
             </a>
