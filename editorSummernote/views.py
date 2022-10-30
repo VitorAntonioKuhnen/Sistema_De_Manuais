@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Manuais
 from django.db.models import Q
 
@@ -17,3 +17,26 @@ def principal(request):
 def manual(request, id):
     manuals = Manuais.objects.get(id=id)
     return render(request, 'manual.html', {'manuals':manuals})
+
+def btAdicionar(request):
+    return render(request, 'cadManual.html')
+
+def adicionar_manual(request):
+    titulo = request.POST.get('titulo').strip()
+    conteudo = request.POST.get('conteudo').strip()
+    tag = request.POST.get('tag').strip()
+
+    if titulo == "":
+        print("Titulo não pode ser vazio!!")
+
+    elif conteudo == "":
+        print("Conteúdo do manual não pode ser Vazil!!")
+
+    elif tag == "":
+        print("É preciso informar uma TAG para salvar o Manual") 
+
+    else:      
+        Manuais.objects.create(titulo=titulo, conteudo=conteudo, tag=tag)
+        return redirect('principal')
+        
+    return render(request, 'cadManual.html')   

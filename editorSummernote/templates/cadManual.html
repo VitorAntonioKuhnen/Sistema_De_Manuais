@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pr_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Manual</title>
+</head>
+
+<body>
+    <form id="forms" action="{% url 'adicionar_manual' %}" method="POST"> {% csrf_token %}
+        <div>
+            <input type="text" name="titulo" id="" placeholder="Informe um nome para o seu Manual...">
+            <input type="text" name="tag" placeholder="Informe as tags referentes ao Manual">
+            <div id="Estilização">
+                <textarea name="conteudo" id="" cols="30" rows="10"
+                    placeholder="Faça a criação e estilização do Manual"></textarea>
+            </div>
+            <button id="btSalva" method="submit">Salvar Manual</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
