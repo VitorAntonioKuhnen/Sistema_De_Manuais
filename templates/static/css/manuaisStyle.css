@@ -7,13 +7,16 @@
 }
 html{
     /* background-image: linear-gradient(280deg, #102130bb, #0b738daf, #2cbae4, #041a1f ); */
-    background-image: linear-gradient(280deg, #135289bb, #0b738daf, #2cbae4, #34cbee );
+    /* background-image: linear-gradient(280deg, #135289bb, #0b738daf, #2cbae4, #34cbee ); */
+    background-image: linear-gradient(280deg, #0055ad, #014081, #02274e );
 }
 
 #header{
     padding: 1.5%;
     width: 100%;
-    background-color: blue;
+    background-color: gold;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 15px 5 black;
 }
 
 
@@ -39,7 +42,7 @@ html{
 
 }
 #conteudo{
-    color: black;
+    color: white !important;
     text-align: left;
     padding: 5px 12px;
 }
