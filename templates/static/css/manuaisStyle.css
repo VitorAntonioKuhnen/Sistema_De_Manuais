@@ -47,17 +47,13 @@ html{
     padding: 5px 12px;
 }
 
-#links{
-    box-shadow: 0 0 5px 1px black;
-    border-radius: 5px;
-}
 
-
-#campos{
+#camposManuais{
     overflow: hidden;
     height: 200px;
     border: 0.5px solid black;
     border-radius: 5px;
+    box-shadow: 0 0 5px 1px black;
 }
 #pesquisa>#search{
     width: 50%;

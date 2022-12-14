@@ -22,8 +22,7 @@
         </div>
         <section id="panelManuais">
             {% for manua in manuais %}
-            <a href="{% url 'manual' manua.id %}" id="links">
-                <div id="campos">
+            <a href="{% url 'manual' manua.id %}" id="camposManuais">
                     <div id="titulo">
                         <h2>{{manua.titulo}}</h2>
                     </div>
@@ -31,7 +30,6 @@
                     <div id="conteudo">
                         {{manua.conteudo|safe}}
                     </div>
-                </div>
             </a>
             {% endfor %}
         </section>
